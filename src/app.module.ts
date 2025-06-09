@@ -9,7 +9,7 @@ import { MCPModule } from './mcp/mcp.module';
       isGlobal: true,
     }),
     TodoListsModule,
-    MCPModule
+    MCPModule,
   ],
   controllers: [],
   providers: [],

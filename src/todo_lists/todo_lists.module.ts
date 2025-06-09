@@ -14,12 +14,12 @@ import { TodoItemsService } from './todo-items.service';
         return new TodoListsService([
           { id: 1, name: 'Personal' },
           { id: 2, name: 'Trabajo' },
-          { id: 3, name: 'Compras' }
+          { id: 3, name: 'Compras' },
         ]);
-      }
+      },
     },
-    TodoItemsService
+    TodoItemsService,
   ],
-  exports: [TodoListsService, TodoItemsService]
+  exports: [TodoListsService, TodoItemsService],
 })
 export class TodoListsModule {}

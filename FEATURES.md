@@ -7,18 +7,21 @@ Se ha desarrollado una API de Lista de Tareas que combina endpoints REST tradici
 ## Nuevas Características
 
 ### 1. Sistema MCP
+
 - Integración con OpenAI GPT-3.5 para procesamiento de lenguaje natural
 - Interpretación automática de comandos en texto plano
 - Conversión de lenguaje natural a acciones específicas
 - Sistema de herramientas extensible
 
 ### 2. Gestión de Items
+
 - Identificadores únicos mediante UUID v4
 - Sistema de marcado de completitud
 - Timestamps automáticos (creación y actualización)
 - Asociación con listas específicas
 
 ### 3. API REST Completa
+
 - Gestión de listas de tareas (CRUD)
 - Manipulación de items dentro de las listas
 - Endpoints especializados para marcar items como completados
@@ -35,23 +38,26 @@ Se ha desarrollado una API de Lista de Tareas que combina endpoints REST tradici
 ### Configuración Inicial
 
 1. Instalar dependencias:
+
 ```bash
 npm install
 ```
 
 2. Configurar variable de entorno:
+
 ```bash
 # Crear archivo .env
 OPENAI_API_KEY=OPENAI_API_KEY
 ```
 
 > **Nota**: Para obtener la OPENAI_API_KEY, debes:
+>
 > 1. Ingeresar a: https://platform.openai.com/settings/organization/api-keys
 > 2. Crear tu propio API token
 > 3. Copiar el token generado y pegarlo en tu archivo .env
 
-
 3. Iniciar el servidor:
+
 ```bash
 npm run start:dev
 ```
@@ -61,6 +67,7 @@ npm run start:dev
 #### 1. API REST
 
 **Gestión de Listas:**
+
 ```bash
 # Crear lista
 curl -X POST http://localhost:3000/api/todolists \
@@ -83,6 +90,7 @@ curl -X DELETE http://localhost:3000/api/todolists/1
 ```
 
 **Gestión de Items:**
+
 ```bash
 # Crear item
 curl -X POST http://localhost:3000/todo-lists/1/items \
@@ -107,11 +115,13 @@ curl -X DELETE http://localhost:3000/todo-lists/1/items/uuid-del-item
 #### 2. Sistema MCP
 
 **Listar Herramientas Disponibles:**
+
 ```bash
 curl http://localhost:3000/mcp/tools
 ```
 
 **Usar Procesamiento de Lenguaje Natural:**
+
 ```bash
 # Crear una tarea usando lenguaje natural
 curl -X POST http://localhost:3000/mcp/prompt \
@@ -125,6 +135,7 @@ curl -X POST http://localhost:3000/mcp/prompt \
 ```
 
 **Usar MCP Directamente:**
+
 ```bash
 curl -X POST http://localhost:3000/mcp/execute \
   -H "Content-Type: application/json" \
@@ -142,6 +153,7 @@ curl -X POST http://localhost:3000/mcp/execute \
 Se han implementado tests unitarios y e2e que cubren:
 
 1. **Tests Unitarios**:
+
    - Operaciones CRUD de listas
    - Lógica de servicios
    - Controladores

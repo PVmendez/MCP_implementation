@@ -5,8 +5,8 @@ import { AIService } from './ai.service';
 import { TodoListsModule } from '../todo_lists/todo_lists.module';
 
 @Module({
-    imports: [TodoListsModule],
-    controllers: [MCPController],
-    providers: [MCPService, AIService],
+  imports: [TodoListsModule],
+  controllers: [MCPController],
+  providers: [MCPService, AIService],
 })
-export class MCPModule {} 
+export class MCPModule {}
