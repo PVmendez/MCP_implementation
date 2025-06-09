@@ -6,7 +6,6 @@ import {
   Param,
   Delete,
   Put,
-  NotFoundException,
 } from '@nestjs/common';
 import { TodoItemsService } from './todo-items.service';
 import { CreateTodoItemDto } from './dtos/create-todo-item.dto';

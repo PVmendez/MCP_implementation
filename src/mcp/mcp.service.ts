@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { MCPTool } from './interfaces/mcp-tool.interface';
 import { TodoItemsService } from '../todo_lists/todo-items.service';
 import { TodoListsService } from '../todo_lists/todo_lists.service';
